@@ -11,6 +11,14 @@ class Passenger
     @age >=18
   end
 
+  def drive
+    @driver = true
+  end
+
+  def driver?
+    @driver
+  end
+
 
 
 end
