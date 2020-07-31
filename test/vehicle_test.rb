@@ -21,4 +21,13 @@ class VehicleTest < Minitest::Test
     assert_equal "Civic", vehicle.model
   end
 
+  def test_it_can_speed
+    vehicle = Vehicle.new("2001", "Honda", "Civic")
+
+    assert_equal false, vehicle.speeding?
+
+    vehicle.speed
+    assert_equal true, vehicle.speeding?
+  end
+
 end
