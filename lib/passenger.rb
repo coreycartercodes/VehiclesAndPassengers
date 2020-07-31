@@ -7,6 +7,10 @@ class Passenger
     @driver = false
   end
 
+  def adult?
+    @age >=18
+  end
+
 
 
 end
