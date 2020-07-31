@@ -18,10 +18,11 @@ class PassengerTest < Minitest::Test
 
     assert_equal "Charlie", charlie.name
     assert_equal 18, charlie.age
+    assert_equal "Taylor", taylor.name
   end
 
   def test_it_can_tell_adult
-    
+
     charlie = Passenger.new({"name" => "Charlie", "age" => 18})
     taylor = Passenger.new({"name" => "Taylor", "age" => 12})
 
@@ -30,9 +31,7 @@ class PassengerTest < Minitest::Test
   end
 
   def test_drive_changes_driver?
-    skip
     charlie = Passenger.new({"name" => "Charlie", "age" => 18})
-    taylor = Passenger.new({"name" => "Taylor", "age" => 12})
 
     assert_equal false, charlie.driver?
 
